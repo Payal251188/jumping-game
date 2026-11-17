@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f3ee">
+  <title>Cloudstep — A little leap of faith</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="engine.js" defer></script>
+  <script src="game.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <a class="brand" href="./" aria-label="Cloudstep home"><span aria-hidden="true">☁</span> cloudstep<span class="brand-dot">.</span></a>
+      <span class="edition">A TINY ESCAPE FROM THE EVERYDAY</span>
+      <a class="back-link" href="../">↗ Play Snake</a>
+    </header>
+
+    <section class="intro" aria-labelledby="title">
+      <div><div class="eyebrow"><span></span> AN ENDLESS LITTLE ADVENTURE</div><h1 id="title">A little leap of <em>faith.</em></h1><p>Soft skies. Brave little hops. Let’s see how far you go.</p></div>
+      <span class="intro-note"><span aria-hidden="true">✳</span> No rush to be anywhere.<br>Just a reason to keep going.</span>
+    </section>
+
+    <section class="game-card" aria-label="Cloudstep jumping game">
+      <div class="scoreboard">
+        <div class="stat"><span class="stat-label">YOUR SCORE</span><strong id="score">0000</strong></div>
+        <div class="journey"><span class="live-dot"></span><span id="status">THE MEADOW IS WAITING</span></div>
+        <div class="stat best-stat"><span class="stat-label">PERSONAL BEST</span><strong id="best">0000</strong></div>
+      </div>
+      <div class="scene" id="scene">
+        <canvas id="game" width="1200" height="600" tabindex="0" aria-label="Cloudstep. Jump over stumps and gaps with Space, W or Up. Press twice to double jump. Collect golden gems.">Canvas support is required to play.</canvas>
+        <div class="scene-badge"><span aria-hidden="true">✦</span> THE SUNLIT MEADOWS</div>
+        <div class="overlay" id="overlay">
+          <div class="overlay-content">
+            <span class="overlay-tag" id="overlayTag">MEET YOUR NEXT LITTLE ADVENTURE</span>
+            <h2 id="overlayTitle">Great things start<br>with a small hop.</h2>
+            <p id="overlayText">Hop over stumps. Leap across the clouds.<br>A little courage goes a long way.</p>
+            <button class="primary-button" id="playButton" type="button"><span id="playLabel">LET’S WANDER</span><span aria-hidden="true">→</span></button>
+            <span class="overlay-hint" id="overlayHint">or press space to begin</span>
+          </div>
+        </div>
+      </div>
+      <div class="game-bar">
+        <div class="run-stats"><span><b id="distance">0</b> m explored</span><span class="gem-stat">◆ <b id="gems">0</b> gems</span></div>
+        <div class="game-actions">
+          <button id="soundButton" type="button" aria-pressed="false" aria-label="Turn sound on">♪ <span id="soundLabel">SOUND OFF</span></button>
+          <span class="divider"></span>
+          <button id="pauseButton" type="button" disabled>Ⅱ PAUSE</button>
+          <button id="restartButton" type="button" aria-label="Restart game">↻ <span>RESTART</span></button>
+        </div>
+      </div>
+    </section>
+
+    <button class="jump-button" id="jumpButton" type="button" aria-label="Jump. Press twice to double jump.">↑ <span>JUMP <small>tap twice for a double jump</small></span></button>
+    <section class="instructions" aria-label="How to play">
+      <div class="instruction"><span class="instruction-icon" aria-hidden="true">↑</span><div><strong>TAKE THE LEAP</strong><p><kbd>SPACE</kbd> <kbd>↑</kbd> or <kbd>W</kbd> to jump <span class="sep">/</span> tap on mobile</p></div></div>
+      <div class="instruction"><span class="instruction-icon double" aria-hidden="true">↟</span><div><strong>A LITTLE EXTRA LIFT</strong><p>Jump again in the air to <b>double jump</b></p></div></div>
+      <div class="save-note"><span aria-hidden="true">✓</span><span id="storageNote">Your best adventure, saved.<br>Right here in your browser.</span></div>
+    </section>
+    <footer class="footer"><span>SMALL STEPS. LOVELY PLACES.</span><span><kbd>P</kbd> pause <span class="sep">/</span> <kbd>R</kbd> restart <span aria-hidden="true">✳</span></span></footer>
+    <div class="sr-only" id="announcer" role="status" aria-live="polite" aria-atomic="true"></div>
+  </main>
+</body>
+</html>
